@@ -10,6 +10,7 @@ import img_workplace from "../../asset/img/workplace.jpg";
 
 const Exercise2 = () => {
   const [isOpenDialog, { setTrue :openDialog, setFalse: hidenDialog }] = useBoolean(false);
+  const [isOpenDialogOnDismiss, { setTrue :openDialogOnDismiss, setFalse: hidenDialogOnDismiss }] = useBoolean(false);
   const [isOpenModal, { setTrue :openModal, setFalse: hidenModal }] = useBoolean(false);
   const customHeaderDialog = () => {
     return (
@@ -57,6 +58,7 @@ const Exercise2 = () => {
       </strong>
 
       <Button text="Open Dialog" onClick={openDialog} />
+      <Button text="Open Dialog on Dismiss" onClick={openDialogOnDismiss} />
       <Button styleType="cancel" text="Open Modal" onClick={openModal} />
 
       {isOpenModal && (
@@ -72,6 +74,16 @@ const Exercise2 = () => {
         <Dialog
           isDarkOverlay={false}
           onClose={hidenDialog}
+          onRenderHeader={customHeaderDialog()}
+          onRenderBody={customBodyDialog()}
+          onRenderFooter={customFooterDialog()}
+        ></Dialog>
+      )}
+      {isOpenDialogOnDismiss && (
+        <Dialog
+          isDarkOverlay={false}
+          onClose={hidenDialogOnDismiss}
+          isDismiss={true}
           onRenderHeader={customHeaderDialog()}
           onRenderBody={customBodyDialog()}
           onRenderFooter={customFooterDialog()}
