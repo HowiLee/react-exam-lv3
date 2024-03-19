@@ -19,7 +19,12 @@ const useLocalStorage = (key, defaultValue) => {
       if (e.key) {
         const obj = { ...localStorage };
         if(e.newValue && e.newValue !== "undefined"){
-          obj[key] = JSON.parse(e.newValue);
+          if(typeof e.newValue === "string"){
+
+            obj[key] = JSON.parse(e.newValue);
+          }else {
+            obj[key] = e.newValue;
+          }
         } else {
           obj[key] = defaultValue
         }
