@@ -8,28 +8,31 @@ const useLocalStorage = (key, defaultValue) => {
     React.useContext(LocalStorageContext);
 
   React.useEffect(() => {
-    const obj = {...localStorage};
+    const obj = { ...localStorage };
     let value = LocalStorageUtil.getItem(key) || defaultValue;
-      obj[key] = value;
-    setLocalStorage({...obj});
+    obj[key] = value;
+    setLocalStorage({ ...obj });
   }, [defaultValue, key]);
 
   React.useEffect(() => {
     const changeValueFromLocalStorageBrower = (e) => {
+      const obj = { ...localStorage };
       if (e.key) {
-        const obj = { ...localStorage };
-        if(e.newValue && e.newValue !== "undefined"){
-          if(typeof e.newValue === "string"){
-
+        if (
+          Object.keys(obj).every((objKey) => e.key === objKey) &&
+          e.newValue &&
+          e.newValue !== "undefined"
+        ) {
+          if (typeof e.newValue === "object") {
             obj[key] = JSON.parse(e.newValue);
-          }else {
+          } else {
             obj[key] = e.newValue;
           }
         } else {
-          obj[key] = defaultValue
+          obj[key] = defaultValue;
         }
-        setLocalStorage({ ...obj });
       }
+      setLocalStorage({ ...obj });
     };
     window.addEventListener("storage", changeValueFromLocalStorageBrower);
     return () => {
@@ -40,7 +43,7 @@ const useLocalStorage = (key, defaultValue) => {
   const setValue = React.useCallback(
     (value) => {
       LocalStorageUtil.setItem(key, value);
-      const obj = {...localStorage};
+      const obj = { ...localStorage };
       obj[key] = value;
       setLocalStorage({ ...obj });
     },
