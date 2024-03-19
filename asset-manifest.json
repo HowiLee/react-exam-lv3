@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-exam-lv3/static/css/main.f7bcc562.css",
-    "main.js": "/react-exam-lv3/static/js/main.2ff40a43.js",
+    "main.js": "/react-exam-lv3/static/js/main.27bdad0f.js",
     "static/js/453.a2cac8c4.chunk.js": "/react-exam-lv3/static/js/453.a2cac8c4.chunk.js",
     "static/media/img_girl.jpg": "/react-exam-lv3/static/media/img_girl.489ecd820a7825ea3ae4.jpg",
     "static/media/workplace.jpg": "/react-exam-lv3/static/media/workplace.8d13f48ef0fd3582e1f4.jpg",
     "index.html": "/react-exam-lv3/index.html",
     "main.f7bcc562.css.map": "/react-exam-lv3/static/css/main.f7bcc562.css.map",
-    "main.2ff40a43.js.map": "/react-exam-lv3/static/js/main.2ff40a43.js.map",
+    "main.27bdad0f.js.map": "/react-exam-lv3/static/js/main.27bdad0f.js.map",
     "453.a2cac8c4.chunk.js.map": "/react-exam-lv3/static/js/453.a2cac8c4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7bcc562.css",
-    "static/js/main.2ff40a43.js"
+    "static/js/main.27bdad0f.js"
   ]
 }
