@@ -1,0 +1,42 @@
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  user-select: none;
+  width: fit-content;
+  min-width: 100px;
+  height: 40px;
+  margin: 5px;
+}
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+
+.btn-cancel {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-cancel:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
